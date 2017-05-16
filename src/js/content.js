@@ -14,7 +14,7 @@
 
 	if (data && check) {
 		chrome.runtime.sendMessage([data,window.location.href],function(result){
-			if(result[0]){
+			if(result && result[0]){
 				var jsonViewCss= chrome.extension.getURL("css/json.css");
 				var el = document.createElement('link');
 				el.rel='stylesheet';
@@ -24,7 +24,7 @@
 
 				el = document.createElement('script');
 				el.type='text/javascript';
-				el.src=chrome.extension.getURL('js/lib/zepto.min.js');
+				el.src=chrome.extension.getURL('lib/zepto.min.js');
 				document.head.appendChild(el);
 
 				var aa = document.createElement('script');

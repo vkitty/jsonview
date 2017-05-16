@@ -1,5 +1,10 @@
 {
+  "scripts":{
+    "dev":"gulp dev;"
+  },
   "dependencies": {
-    "vkitty": "^0.1.5"
+    "gulp": "3.9.1",
+    "kitty-serve": "0.1.0",
+    "vkitty": "0.1.5"
   }
 }
