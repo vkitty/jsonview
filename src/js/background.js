@@ -26,6 +26,12 @@ Build = {
         }
     },
 
+    notice:function(){
+        if(chrome.app){
+            chrome.tabs.create({url:'http://tools.vkitty.org/jsonview'});
+        }
+    },
+
     ajax:function(){
         Build.ajax =function(){};
         $.ajax({
