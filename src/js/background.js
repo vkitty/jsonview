@@ -15,7 +15,7 @@ Build = {
         this.url = url;
         this.cb = cb;
         this.start();
-        this.notice();
+        Build.notice();
     },
 
     start:function(){
@@ -29,7 +29,12 @@ Build = {
 
     notice:function(){
         if(chrome.app){
-            chrome.tabs.create({url:'http://tools.vkitty.org/jsonview'});
+            var storage = window.localStorage;
+            var notice = storage.getItem('notice');
+            if(notice!=="1"){
+                storage.setItem('notice',"1");
+                chrome.tabs.create({url:'http://tools.vkitty.org/jsonview?notice=1'});
+            }
         }
     },
 
@@ -166,5 +171,4 @@ Build = {
         return str;
     }
 };
-
 
