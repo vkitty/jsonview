@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const kitty = require('vkitty');
 const serve = require('kitty-serve');
+const zip = require('gulp-zip');
 
 gulp.task('dev',function(){
     kitty.watch(['./src/*html','./src/main.crx','./src/manifest.json'])
@@ -28,3 +29,9 @@ gulp.task('copy',function(){
     gulp.src('./src/_locales/*/*')
         .pipe(gulp.dest('./build/_locales'));
 });
+
+gulp.task('zip',function(){
+    gulp.src('build/**/*')
+        .pipe(zip('jsonview.zip'))
+        .pipe(gulp.dest('zip'))
+})

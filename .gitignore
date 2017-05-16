@@ -20,3 +20,5 @@ logs/
 *.gz
 *.war
 build/
+zip/
+zip
