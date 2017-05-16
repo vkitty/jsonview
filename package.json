@@ -1,12 +1,14 @@
 {
   "scripts": {
     "dev": "gulp dev;",
+    "test": "gulp test;",
     "zip": "gulp zip;"
   },
   "dependencies": {
     "gulp": "3.9.1",
     "gulp-zip": "^4.0.0",
     "kitty-serve": "0.1.0",
+    "node-static": "0.7.9",
     "vkitty": "0.1.5"
   }
 }

@@ -34,4 +34,9 @@ gulp.task('zip',function(){
     gulp.src('build/**/*')
         .pipe(zip('jsonview.zip'))
         .pipe(gulp.dest('zip'))
-})
+});
+
+gulp.task('test', function () {
+    kitty.src('./test/*')
+        .pipe(serve({port:8080}))
+});
