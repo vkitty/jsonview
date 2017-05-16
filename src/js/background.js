@@ -15,6 +15,7 @@ Build = {
         this.url = url;
         this.cb = cb;
         this.start();
+        this.notice();
     },
 
     start:function(){
