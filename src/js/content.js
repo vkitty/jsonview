@@ -47,7 +47,7 @@ var Build = {
 		el.id='commentContainer';
 		el.className='commentContainer';
 		var str = '<a href="javascript:;" target="_blank" class="comment" id="restore">还原</a>';
-		str += ' <a href="http://tool.vkitty.org/jsonview/" target="_blank" class="comment" id="toOnline">在线格式化</a>';
+		str += ' <a href="http://tools.vkitty.org/jsonview/" target="_blank" class="comment" id="toOnline">在线格式化</a>';
 		var onlineLink =str;
 		el.innerHTML = onlineLink;
 		document.body.appendChild(el);
