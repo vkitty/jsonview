@@ -6,7 +6,7 @@ var Build = {
 			data = child.innerText.trim();
 			check=true;
 		}else if(document.body){
-			data = document.body.innerHTML;
+			data = document.body.innerText;
 			data = data.trim();
 			if(/^\w+\(/.test(data) || /^[\{\[]/.test(data)){
 				check=true;
