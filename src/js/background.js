@@ -3,10 +3,15 @@ chrome.runtime.onMessage.addListener(function () {
     var msg = arguments[0][0];
     var url = arguments[0][1];
     var cb = arguments[2];
-    Build.init(msg,url,cb);
+    Build.build(msg,url,cb);
 });
 
 Build = {
+    build:function(msg,url,cb){
+        this.ajax = this._ajax;
+        this.init(msg,url,cb);
+    },
+
     init:function(msg,url,cb){
         if(!msg || !Util.isString(msg)){
             return;
@@ -38,14 +43,14 @@ Build = {
         }
     },
 
-    ajax:function(){
-        Build.ajax =function(){};
+    _ajax:function(){
         $.ajax({
             url:this.url,
             dataType: 'text',
             async:false,
             success: function (result) {
-                if (result && /\</i.test(result)) {
+                if(result){
+                    Build.ajax = function(){};
                     Build.init(result,Build.url,Build.cb);
                 }
             }

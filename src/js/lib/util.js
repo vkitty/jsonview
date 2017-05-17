@@ -43,7 +43,7 @@ var Util = {
     },
 
     isJsonP:function(it){
-        return /^\w+\([\[\{].*[\}\]]\)$/.test(it);
+        return /^[^\(]+\([\[\{].*[\}\]]\)$/.test(it);
     },
 
     isJson:function(it){
