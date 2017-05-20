@@ -37,6 +37,6 @@ gulp.task('zip',function(){
 });
 
 gulp.task('test', function () {
-    kitty.src('./test/*')
-        .pipe(serve({port:8080}))
+    kitty.watch('./test/*')
+        .pipe(serve.src({port:8080}))
 });

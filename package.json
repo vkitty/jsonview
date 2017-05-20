@@ -6,8 +6,8 @@
   },
   "dependencies": {
     "gulp": "3.9.1",
-    "gulp-zip": "^4.0.0",
-    "kitty-serve": "0.1.0",
-    "vkitty": "0.1.5"
+    "gulp-zip": "4.0.0",
+    "kitty-serve": "0.1.1",
+    "vkitty": "0.2.0"
   }
 }

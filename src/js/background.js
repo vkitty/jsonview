@@ -16,7 +16,7 @@ Build = {
         if(!msg || !Util.isString(msg)){
             return;
         }
-        this.msg = msg.trim();
+        this.msg = msg.trim().replace(/\n/g,'');
         this.url = url;
         this.cb = cb;
         this.start();
